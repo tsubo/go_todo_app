@@ -14,6 +14,9 @@ up: ## Do docker compose up with hot reload
 down: ## Do docker compose down
 	docker compose down
 
+stop: ## Do docker compose stop
+	docker compose stop
+
 logs: ## Tail docker compose logs
 	docker compose logs -f
 
