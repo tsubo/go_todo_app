@@ -6,7 +6,7 @@ import (
 	"github.com/tsubo/go_todo_app/entity"
 )
 
-func (r *Repository) ListTask(ctx context.Context, db Queryer) (entity.Tasks, error) {
+func (r *Repository) ListTasks(ctx context.Context, db Queryer) (entity.Tasks, error) {
 	tasks := entity.Tasks{}
 	sql := `SELECT id, title, status, created, modified FROM tasks;`
 	if err := db.SelectContext(ctx, &tasks, sql); err != nil {
